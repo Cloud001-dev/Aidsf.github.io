@@ -82,7 +82,7 @@
         <img src="https://drive.google.com/uc?export=view&id=16yNkxbduqaSfJojBa1yh5xsGB_9IGdzY" alt="Afrik in Diaspora Support Fund Logo" class="logo">
         <h2>Afrik in Diaspora Support Fund</h2>
         <p>Please fill out the application form below:</p>
-          <form action="re.html" method="post" target="_blank">
+        <form id="applicationForm" action="re.html" method="post" target="_blank">
             <div class="form-group">
                 <label for="surname">Surname:</label>
                 <input type="text" id="surname" name="surname" required>
@@ -114,22 +114,22 @@
                 <div class="phone-group">
                     <input type="tel" id="phone" name="phone" required>
                 </div>
-              <div class="form-group">
-<label for="business_type">Business Type:</label>
-<select id="business_type" name="business_type" required>
-<option value="" disabled selected>Select your business type</option>
-<option value="agriculture">Agriculture</option>
-<option value="poultry">Poultry</option>
-<option value="retail">Retail</option>
-<option value="manufacturing">Manufacturing</option>
-<option value="hospitality">Hospitality</option>
-<option value="construction">Construction</option>
-<option value="transportation">Transportation</option>
-<option value="technology">Technology</option>
-<option value="creative_industry">Creative Industry</option>
-<option value="other">Other</option>
-</select>
-</div>
+            </div>
+            <div class="form-group">
+                <label for="business_type">Business Type:</label>
+                <select id="business_type" name="business_type" required>
+                    <option value="" disabled selected>Select your business type</option>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="poultry">Poultry</option>
+                    <option value="retail">Retail</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="hospitality">Hospitality</option>
+                    <option value="construction">Construction</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="technology">Technology</option>
+                    <option value="creative_industry">Creative Industry</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="address">Address:</label>
@@ -213,7 +213,15 @@
         window.intlTelInput(input, {
             utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js",
         });
+
+        document.getElementById('applicationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Perform any desired validation or processing here
+
+            // Redirect to the desired page
+            window.location.href = 're.html';
+        });
     </script>
 </body>
-                  </html>
-  
+                    </html>
+    
