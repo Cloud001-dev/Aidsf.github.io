@@ -82,7 +82,7 @@
         <img src="https://drive.google.com/uc?export=view&id=16yNkxbduqaSfJojBa1yh5xsGB_9IGdzY" alt="Afrik in Diaspora Support Fund Logo" class="logo">
         <h2>Afrik in Diaspora Support Fund</h2>
         <p>Please fill out the application form below:</p>
-        <form id="applicationForm" action="re.html" method="post" target="_blank">
+        <form id="applicationForm">
             <div class="form-group">
                 <label for="surname">Surname:</label>
                 <input type="text" id="surname" name="surname" required>
@@ -193,35 +193,24 @@
                         <option value="Nedbank">Nedbank</option>
                         <option value="Standard Bank">Standard Bank</option>
                     </optgroup>
-                    <option value="Cashapp">Cashapp</option>
+                    <optgroup label="Ghana">
+                        <option value="Ghana Commercial Bank">Ghana Commercial Bank</option>
+                        <option value="Ecobank Ghana">Ecobank Ghana</option>
+                        <option value="Standard Chartered Bank Ghana">Standard Chartered Bank Ghana</option>
+                        <option value="Barclays Bank Ghana">Barclays Bank Ghana</option>
+                    </optgroup>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="account_number">Account Number:</label>
-                <input type="text" id="account_number" name="account_number" required>
-            </div>
-            <div class="form-group">
-                <label for="reason">Reason for Application:</label>
-                <textarea id="reason" name="reason" rows="4" required></textarea>
-            </div>
-            <button type="submit">Submit Application</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>
+
     <script>
-        const input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js",
-        });
-
         document.getElementById('applicationForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            // Perform any desired validation or processing here
-
-            // Redirect to the desired page
-            window.location.href = 're.html';
+            event.preventDefault(); // Prevent the form from submitting
+            window.location.href = 're.html'; // Redirect to re.html
         });
     </script>
 </body>
-                    </html>
-    
+                </html>
+                
